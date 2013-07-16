@@ -1,0 +1,39 @@
+function button1Command(event) {
+alert("button 1 command " + event);
+}
+
+function button2Command(event) {
+alert("button 2 command" + event);
+doServerRequest("hello","you");
+}
+
+function initialize( ) {
+var b1 = document.getElementById("signup");
+var b2 = document.getElementById("signin");
+b1.onclick = button1Command;
+b2.onclick = button2Command;
+}
+
+var theServerRequest;
+function doServerRequest(commandString,commandArgs) {
+
+theServerRequest = new XMLHttpRequest( );
+var theString="name=hello&game=webguff";
+var URL="http://127.0.0.1:8000/login";
+
+theServerRequest.open("POST",theString,true);
+//adding header
+theServerRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+theServerRequest.setRequestHeader("Content-length", theString.length);
+theServerRequest.setRequestHeader("Connection", "close");
+theServerRequest.onreadystatechange = retrieveServerResponse;
+theServerRequest.send(theString);
+}
+
+function retrieveServerResponse( ) {
+if (theServerRequest.readyState == 4) { 
+if (theServerRequest.status == 200) {
+alert("Response is " + theServerRequest.responseText);
+}
+}
+}

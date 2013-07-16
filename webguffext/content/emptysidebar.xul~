@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+<?xml-stylesheet href="content/css/webguff.css" type="text/css" ?>
+
+<!DOCTYPE page SYSTEM "chrome://emptysidebar/locale/emptysidebar.dtd">
+
+<page id="sbEmptySidebar" title="&emptysidebar.title;" onload="initialize();"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" align-title ="center" >
+<script src="abc.js"/>
+
+<vbox >
+<!--vbox >
+<label value=" " />
+</vbox>
+
+<vbox align="center"   >
+<label value="Sign In" style="color:blue;"  />
+</vbox>
+
+<vbox >
+<label value=" " />
+</vbox>
+
+
+<vbox align="left">
+<label value="User Name:" />
+<textbox/>
+</vbox>
+
+<vbox align="left">
+<label value="Password:" />
+<textbox type="password"/>
+</vbox>
+
+<checkbox label="Keep me signed in" checked="false"/>
+
+<vbox>
+  <button id="signin" label="Sign In" ordinal="1"/>
+</vbox>
+		
+<vbox align="left">
+<label value="Forgotten your Password" />
+</vbox>
+
+<vbox >
+<label value=" " />
+</vbox>
+<vbox >
+<label value="Creat a new account " />
+</vbox>
+
+<vbox>
+  <button id="signup" label="Sign Up" ordinal="1"/>
+</vbox-->
+ <vbox flex="1">
+        <browser src="chrome://emptysidebar/locale/about.html" flex="1"/>
+    </vbox>
+
+</vbox>
+
+
+</page>
